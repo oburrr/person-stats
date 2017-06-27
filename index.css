@@ -1,3 +1,18 @@
 body {
-    padding:    1rem;
+    padding:            1rem;
+    background-color:  #e7d5d5;   
+}
+
+h1 {
+    font-family:        Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color:   #00ff80;
+    padding:            20px;
+    border-radius:      
+}
+
+label {
+    font-size:          30px;
 }
