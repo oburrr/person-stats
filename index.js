@@ -1,30 +1,27 @@
 
-function updateHeading(ev) {
-  
+function handleSubmit(ev) {
   ev.preventDefault()
   const f = ev.target
- 
-  const lastName = f.personLastName.value
+
   const name = f.personName.value
- // const heading = document.querySelector('h1')
-  
-  const divParagraph = document.querySelector('#divP')
-  divParagraph.innerHTML = (name + " " + lastName)
+  const age = f.age.value
+  const favoriteColor = f.favoriteColor.value
 
-if (name || lastName === "blue") {
-      document.querySelector('#divP').style.color="blue"
-}
-else if (name || lastName === "red") {
-      document.querySelector('#divP').style.color="red"
-} 
-else {
-    document.querySelector('divP').style.color="black"
-}
+  const p = document.createElement('p')
+  p.textContent = `${name}, age ${age} ${favoriteColor}`
+  p.style.backgroundColor = favoriteColor
+  // p.setAttribute('id', name)
 
-}
+  const stats = document.querySelector('#stats')
+  stats.appendChild(p)
 
+  // stats.innerHTML = '<p>' + name + ', age ' + age + '</p>'
+  // stats.innerHTML = `
+  //   <p style="background-color: ${favoriteColor}">
+  //     ${name}, age ${age}
+  //   </p>
+  // `
+}
 
 const personForm = document.querySelector('#person-form')
-personForm.addEventListener('submit', updateHeading)
-
-
+personForm.addEventListener('submit', handleSubmit)
