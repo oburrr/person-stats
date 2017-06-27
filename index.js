@@ -8,7 +8,7 @@ function handleSubmit(ev) {
 
   const list = document.createElement('ul')
 
-  const nameItem = document.createElement('li')
+  /*const nameItem = document.createElement('li')
   nameItem.textContent = `Name: ${name}`
   list.appendChild(nameItem)
 
@@ -17,7 +17,7 @@ function handleSubmit(ev) {
   list.appendChild(ageItem)
 
   const colorItem = document.createElement('li')
-  colorItem.textContent = `Favorite color:  `
+  colorItem.textContent = `Favorite color:  ` */
 
   /*const colorDiv = document.createElement('div')
   colorDiv.style.backgroundColor = favoriteColor
@@ -25,10 +25,11 @@ function handleSubmit(ev) {
   colorDiv.style.height = '3rem'
   colorItem.appendChild(colorDiv)*/
 
-  list.appendChild(colorItem)
+  //list.appendChild(colorItem)
 
   const stats = document.querySelector('#stats')
   stats.appendChild(list)
+  stats.appendChild(renderListItem(name, age, favoriteColor))
   stats.appendChild(renderColor(favoriteColor))
 }
 
@@ -41,7 +42,21 @@ function renderColor(favoriteColor) {
 }
 
 function renderListItem(name, age, favoriteColor) {
-    
+
+  const list = document.createElement('ul')
+
+  const nameItem = document.createElement('li')
+  nameItem.textContent = `Name: ${name}`
+  list.appendChild(nameItem)
+
+  const ageItem = document.createElement('li')
+  ageItem.textContent = `Age: ${age}`
+  list.appendChild(ageItem)
+
+  const colorItem = document.createElement('li')
+  colorItem.textContent = `Favorite color:  `
+  list.appendChild(colorItem)
+  return list
 }
 
 
