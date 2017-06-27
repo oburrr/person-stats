@@ -6,7 +6,7 @@ function handleSubmit(ev) {
   const name = f.personName.value
   const age = f.age.value
   const favoriteColor = f.favoriteColor.value
-
+nn
   const p = document.createElement('p')
   p.textContent = `${name}, age ${age} ${favoriteColor}`
   p.style.backgroundColor = favoriteColor
